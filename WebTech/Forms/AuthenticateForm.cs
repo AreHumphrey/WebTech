@@ -11,11 +11,11 @@ using System.Data.SqlClient;
 
 namespace TechDep
 {
-    public partial class AuthenticateForm1 : Form
+    public partial class AuthenticateForm : Form
     {
         DBConnection dbconnection = new DBConnection();
 
-        public AuthenticateForm1()
+        public AuthenticateForm()
         {
             InitializeComponent();
             PasswordBox.UseSystemPasswordChar = true;

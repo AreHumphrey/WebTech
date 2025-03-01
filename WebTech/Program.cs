@@ -16,7 +16,7 @@ namespace TechDep
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AuthenticateForm1());
+            Application.Run(new AuthenticateForm());
         }
     }
 }

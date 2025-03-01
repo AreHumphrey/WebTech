@@ -170,5 +170,10 @@ namespace TechDep
         {
             AddEmployee();
         }
+
+        private void headerPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
