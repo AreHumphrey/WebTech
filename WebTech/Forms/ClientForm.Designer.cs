@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace TechDep
 {
@@ -40,6 +41,7 @@ namespace TechDep
             this.clearButton = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
             this.searchLabel = new System.Windows.Forms.Label();
+            this.userPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -180,6 +182,14 @@ namespace TechDep
             this.PhoneTextBox.Name = "PhoneTextBox";
             this.PhoneTextBox.Size = new System.Drawing.Size(250, 22);
             this.PhoneTextBox.TabIndex = 7;
+
+            // userPictureBox
+            this.userPictureBox.Image = Image.FromFile("C:\\Users\\lutdi\\source\\repos\\WebTech\\WebTech\\Icons\\client.png");
+            this.userPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            this.userPictureBox.Location = new System.Drawing.Point(20, 60);
+            this.userPictureBox.Size = new System.Drawing.Size(100, 100);
+            this.userPictureBox.TabIndex = 5;
+            this.userPictureBox.TabStop = false;
             // 
             // headerPanel
             // 
@@ -189,6 +199,7 @@ namespace TechDep
             this.headerPanel.Controls.Add(this.clearButton);
             this.headerPanel.Controls.Add(this.searchButton);
             this.headerPanel.Controls.Add(this.searchLabel);
+            this.headerPanel.Controls.Add(this.userPictureBox);
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(750, 50);
@@ -251,6 +262,7 @@ namespace TechDep
             this.Name = "ClientForm";
             this.Text = "Клиенты компании";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -278,6 +290,7 @@ namespace TechDep
         private System.Windows.Forms.TextBox AddressOtextbox;
         private System.Windows.Forms.TextBox ClientFIOtextbox;
         private System.Windows.Forms.TextBox Phonetextbox;
+        private System.Windows.Forms.PictureBox userPictureBox;
 
 
 
