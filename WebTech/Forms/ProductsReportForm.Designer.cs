@@ -1,4 +1,6 @@
-﻿namespace TechDep
+﻿using System.Windows.Forms;
+
+namespace TechDep
 {
     partial class ProductsReportForm
     {
@@ -74,6 +76,7 @@
             this.Controls.Add(this.exportButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+
             this.Name = "ProductsReportForm";
             this.Text = "Отчет по продуктам";
             this.Load += new System.EventHandler(this.ProductsReportForm_Load);
@@ -88,5 +91,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button exportButton;
+   
     }
 }

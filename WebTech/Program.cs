@@ -16,6 +16,12 @@ namespace TechDep
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            // Создаем БД и таблицы перед запуском приложения
+            DBConnection db = new DBConnection();
+            db.CreateDatabase();
+            db.CreateTables();
+            db.AddEmployee("jora", "Jane Smith", "System Administrator", "+0987654321", "5f4dcc3b5aa765d61d8327deb882cf99", 1)
             Application.Run(new AuthenticateForm());
         }
     }

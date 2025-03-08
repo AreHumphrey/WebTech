@@ -47,21 +47,24 @@ namespace TechDep
             this.clearButton = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
             this.searchLabel = new System.Windows.Forms.Label();
+            this.userPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.headerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(20, 60);
+            this.dataGridView1.Location = new System.Drawing.Point(208, 64);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(600, 200);
+            this.dataGridView1.Size = new System.Drawing.Size(530, 200);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // Efiotextbox
             // 
@@ -97,8 +100,14 @@ namespace TechDep
             this.Passwordtextbox.Name = "Passwordtextbox";
             this.Passwordtextbox.Size = new System.Drawing.Size(250, 22);
             this.Passwordtextbox.TabIndex = 3;
- 
-
+            // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.Location = new System.Drawing.Point(550, 12);
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(200, 22);
+            this.SearchTextBox.TabIndex = 1;
+            this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
             // NewEmployeeButton
             // 
@@ -233,28 +242,17 @@ namespace TechDep
             // 
             // headerPanel
             // 
-
-
-            this.SearchTextBox.Location = new System.Drawing.Point(550, 12);
-            this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(200, 22);
-            this.SearchTextBox.TabIndex = 1;
-            this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
-
-
-      
             this.headerPanel.BackColor = System.Drawing.Color.Gray;
             this.headerPanel.Controls.Add(this.titleLabel);
-            this.headerPanel.Controls.Add(this.SearchTextBox);
             this.headerPanel.Controls.Add(this.clearButton);
             this.headerPanel.Controls.Add(this.searchButton);
             this.headerPanel.Controls.Add(this.searchLabel);
+            this.headerPanel.Controls.Add(this.SearchTextBox);
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(750, 50);
             this.headerPanel.TabIndex = 0;
             this.headerPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.headerPanel_Paint);
-
             // 
             // titleLabel
             // 
@@ -284,9 +282,6 @@ namespace TechDep
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(30, 30);
             this.searchButton.TabIndex = 2;
-
-
-
             // 
             // searchLabel
             // 
@@ -298,13 +293,22 @@ namespace TechDep
             this.searchLabel.TabIndex = 3;
             this.searchLabel.Text = "Поиск:";
             // 
+            // userPictureBox
+            // 
+            this.userPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("userPictureBox.Image")));
+            this.userPictureBox.Location = new System.Drawing.Point(12, 64);
+            this.userPictureBox.Name = "userPictureBox";
+            this.userPictureBox.Size = new System.Drawing.Size(178, 200);
+            this.userPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.userPictureBox.TabIndex = 5;
+            this.userPictureBox.TabStop = false;
+            // 
             // EmployeeForm
             // 
             this.ClientSize = new System.Drawing.Size(750, 500);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.dataGridView1);
-            this.headerPanel.Controls.Add(this.SearchTextBox);
-
+            this.Controls.Add(this.userPictureBox);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Name = "EmployeeForm";
@@ -317,8 +321,8 @@ namespace TechDep
             this.groupBox2.PerformLayout();
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -339,6 +343,7 @@ namespace TechDep
         private System.Windows.Forms.TextBox AddressOtextbox;
         private System.Windows.Forms.TextBox ClientFIOtextbox;
         private System.Windows.Forms.TextBox Phonetextbox;
+        private System.Windows.Forms.PictureBox userPictureBox;
 
 
 

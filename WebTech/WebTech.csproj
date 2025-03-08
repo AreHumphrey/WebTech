@@ -118,6 +118,9 @@
     <EmbeddedResource Include="Forms\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrdersReportForm.resx">
+      <DependentUpon>OrdersReportForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ProductsForm.resx">
       <DependentUpon>ProductsForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,10 +148,15 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Icons\addsotrudnyk.jpg" />
     <Content Include="Icons\clear.png" />
+    <Content Include="Icons\client.png" />
     <Content Include="Icons\logo_yana.png" />
     <Content Include="Icons\reboot.png" />
     <Content Include="Icons\search.png" />
+    <Content Include="Icons\sotrudnyk.png" />
+    <Content Include="Icons\tovary.png" />
+    <Content Include="Icons\zakazy.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

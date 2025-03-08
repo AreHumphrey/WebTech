@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Resources;
 using WebTech.Properties;
 
 namespace TechDep
@@ -18,6 +19,7 @@ namespace TechDep
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductsForm));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.NamePtextbox = new System.Windows.Forms.TextBox();
             this.DescriptionPtextbox = new System.Windows.Forms.TextBox();
@@ -36,20 +38,21 @@ namespace TechDep
             this.clearButton = new System.Windows.Forms.Button();
             this.searchButton = new System.Windows.Forms.Button();
             this.searchLabel = new System.Windows.Forms.Label();
-
+            this.userPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.headerPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).BeginInit();
             this.SuspendLayout();
-
+            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 58);
+            this.dataGridView1.Location = new System.Drawing.Point(204, 58);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(702, 163);
+            this.dataGridView1.Size = new System.Drawing.Size(534, 163);
             this.dataGridView1.TabIndex = 0;
             // 
             // NamePtextbox
@@ -75,7 +78,7 @@ namespace TechDep
             // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Location = new System.Drawing.Point(472, 12);
+            this.SearchTextBox.Location = new System.Drawing.Point(550, 12);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(200, 22);
             this.SearchTextBox.TabIndex = 1;
@@ -154,9 +157,9 @@ namespace TechDep
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Данные";
-
-
+            // 
             // headerPanel
+            // 
             this.headerPanel.BackColor = System.Drawing.Color.Gray;
             this.headerPanel.Controls.Add(this.titleLabel);
             this.headerPanel.Controls.Add(this.SearchTextBox);
@@ -167,40 +170,38 @@ namespace TechDep
             this.headerPanel.Name = "headerPanel";
             this.headerPanel.Size = new System.Drawing.Size(750, 50);
             this.headerPanel.TabIndex = 0;
-
+            // 
             // titleLabel
+            // 
             this.titleLabel.AutoSize = true;
             this.titleLabel.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.titleLabel.ForeColor = System.Drawing.Color.White;
             this.titleLabel.Location = new System.Drawing.Point(20, 15);
             this.titleLabel.Name = "titleLabel";
-            this.titleLabel.Size = new System.Drawing.Size(185, 24);
+            this.titleLabel.Size = new System.Drawing.Size(176, 24);
             this.titleLabel.TabIndex = 0;
             this.titleLabel.Text = "Товары и услуги";
-
-            // SearchTextBox
-            this.SearchTextBox.Location = new System.Drawing.Point(550, 12);
-            this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(200, 22);
-            this.SearchTextBox.TabIndex = 1;
-
+            // 
             // clearButton
-            this.clearButton.BackgroundImage = Image.FromFile(@"C:\Users\lutdi\source\repos\WebTech\WebTech\Icons\clear.png");
+            // 
+            this.clearButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("clearButton.BackgroundImage")));
             this.clearButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.clearButton.Location = new System.Drawing.Point(400, 10);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(30, 30);
             this.clearButton.TabIndex = 1;
-
+            // 
             // searchButton
-            this.searchButton.BackgroundImage = Image.FromFile(@"C:\Users\lutdi\source\repos\WebTech\WebTech\Icons\search.png");
+            // 
+            this.searchButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("searchButton.BackgroundImage")));
             this.searchButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.searchButton.Location = new System.Drawing.Point(440, 10);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(30, 30);
             this.searchButton.TabIndex = 2;
-
+            // 
             // searchLabel
+            // 
             this.searchLabel.AutoSize = true;
             this.searchLabel.ForeColor = System.Drawing.Color.White;
             this.searchLabel.Location = new System.Drawing.Point(500, 15);
@@ -208,25 +209,36 @@ namespace TechDep
             this.searchLabel.Size = new System.Drawing.Size(50, 16);
             this.searchLabel.TabIndex = 3;
             this.searchLabel.Text = "Поиск:";
-
+            // 
+            // userPictureBox
+            // 
+            this.userPictureBox.Image = Image.FromFile("C:\\Users\\lutdi\\source\\repos\\WebTech\\WebTech\\Icons\\zakazy.png");
+            this.userPictureBox.Location = new System.Drawing.Point(12, 58);
+            this.userPictureBox.Name = "userPictureBox";
+            this.userPictureBox.Size = new System.Drawing.Size(165, 163);
+            this.userPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.userPictureBox.TabIndex = 5;
+            this.userPictureBox.TabStop = false;
+            // 
             // ProductsForm
+            // 
             this.ClientSize = new System.Drawing.Size(750, 400);
             this.Controls.Add(this.headerPanel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.userPictureBox);
             this.Name = "ProductsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Товары и услуги";
-
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.headerPanel.ResumeLayout(false);
             this.headerPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userPictureBox)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -238,6 +250,7 @@ namespace TechDep
         private System.Windows.Forms.Panel headerPanel;
         private System.Windows.Forms.Label titleLabel, searchLabel;
         private System.Windows.Forms.Button searchButton, clearButton;
+        private System.Windows.Forms.PictureBox userPictureBox;
 
 
     }
